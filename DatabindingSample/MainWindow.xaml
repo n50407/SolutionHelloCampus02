@@ -15,5 +15,9 @@
         <CheckBox Content="Ausgelaufen" IsChecked="{Binding Expired}"></CheckBox>
         <Slider Value="{Binding Price}" Minimum="0" Maximum="100"></Slider>
         <Button Click="Button_Click">für Debug</Button>
+        <Label>Ust</Label>
+        <TextBox Text="{Binding Ust}"/>
+        <Label>Brutto</Label>
+        <TextBlock Text="{Binding Brutto}"/>
     </StackPanel>
 </Window>

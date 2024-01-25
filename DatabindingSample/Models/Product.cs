@@ -10,6 +10,27 @@ namespace DatabindingSample.Models
     internal class Product: INotifyPropertyChanged //Observer Pattern
     {
         public event PropertyChangedEventHandler PropertyChanged;
+
+        private decimal _Ust;
+        public decimal Ust
+        {
+            get { return _Ust; }
+            set { 
+                _Ust = value; 
+                //Calc Brutto
+                Brutto = Price * (1 + Ust / 100);
+            }
+        }
+
+        private decimal _Brutto;
+
+        public decimal Brutto
+        {
+            get { return _Brutto; }
+            set { _Brutto = value; }
+        }
+
+
         public int ProductId { get; set; }
         public string Productname { get; set; }
         //public decimal Price { get; set; } //Auto-Property
