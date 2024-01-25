@@ -38,7 +38,13 @@ namespace DatabindingSample.Models
                 PropertyChanged(this, new PropertyChangedEventArgs("Price"));
                 */
                 NotifyGui("Price");
+               calcBrutto();
             }
+        }
+        private void calcBrutto()
+        {
+            Brutto = Price * (1 + Ust / 100);
+            NotifyGui("Brutto");
         }
         private decimal _Ust;
         public decimal Ust

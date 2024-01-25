@@ -16,7 +16,7 @@
         <Slider Value="{Binding Price}" Minimum="0" Maximum="100"></Slider>
         <Button Click="Button_Click">für Debug</Button>
         <Label>Ust</Label>
-        <TextBox Text="{Binding Ust}"/>
+        <TextBox Text="{Binding Ust, UpdateSourceTrigger=PropertyChanged}"/><!--nicht erst beim Lostfocus-->
         <Label>Brutto</Label>
         <TextBlock Text="{Binding Brutto}"/>
     </StackPanel>
