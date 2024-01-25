@@ -11,16 +11,7 @@ namespace DatabindingSample.Models
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private decimal _Ust;
-        public decimal Ust
-        {
-            get { return _Ust; }
-            set { 
-                _Ust = value; 
-                //Calc Brutto
-                Brutto = Price * (1 + Ust / 100);
-            }
-        }
+       
 
         private decimal _Brutto;
 
@@ -49,7 +40,18 @@ namespace DatabindingSample.Models
                 NotifyGui("Price");
             }
         }
-
+        private decimal _Ust;
+        public decimal Ust
+        {
+            get { return _Ust; }
+            set
+            {
+                _Ust = value;
+                //Calc Brutto
+                Brutto = Price * (1 + Ust / 100);
+                NotifyGui("Brutto");
+            }
+        }
         private void NotifyGui(string propertyName)
         {
             if (PropertyChanged != null)
