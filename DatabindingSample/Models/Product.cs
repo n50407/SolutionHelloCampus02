@@ -21,11 +21,19 @@ namespace DatabindingSample.Models
             set {
                 _Price = value;
 
+                /*
             if (PropertyChanged != null)
                 PropertyChanged(this, new PropertyChangedEventArgs("Price"));
+                */
+                NotifyGui("Price");
             }
         }
 
+        private void NotifyGui(string propertyName)
+        {
+            if (PropertyChanged != null)
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+        }
 
         public string Color { get; set; }
         public bool Expired { get; set; }
