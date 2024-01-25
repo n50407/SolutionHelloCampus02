@@ -6,9 +6,12 @@
         xmlns:local="clr-namespace:HelloCampus02"
         mc:Ignorable="d"
         Title="Hello WPF" Height="600" Width="800">
+    <Window.Resources><!--logische Ressourcen-->
+        <SolidColorBrush x:Key="myBlueColor" Color="Blue"></SolidColorBrush>
+    </Window.Resources>
     <StackPanel>
-        <Button>Hello World</Button>
-        <CheckBox>Important</CheckBox>
+        <Button Background="{StaticResource myBlueColor}">Hello World</Button>
+        <CheckBox Background="{StaticResource myBlueColor}">Important</CheckBox>
         <Label>das ist eine Beschriftung Neu</Label>
 
         <Button Background="Gold" FontStyle="Italic" Content="also Servus">            
@@ -41,13 +44,13 @@
                 </StackPanel>
             </Expander.Content>
         </Expander>
-        <GroupBox Header="Wochentage">
+        <GroupBox Header="Wochentage" Background="Blue">
             <StackPanel>
                <GroupItem>Montag</GroupItem>
                <GroupItem>Dienstag</GroupItem>
             </StackPanel>
         </GroupBox>
-        <ListBox SelectionMode="Single" SelectionChanged="onChange">
+        <ListBox Background="Blue" SelectionMode="Single" SelectionChanged="onChange">
             <ListBox.Items>
                 <ListBoxItem>Burgenland</ListBoxItem>
                 <ListBoxItem>Steiermark</ListBoxItem>

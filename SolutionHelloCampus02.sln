@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloCampus02", "HelloCampu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject1", "TestProject1\TestProject1.csproj", "{FCE7A584-4255-4133-BFD1-617080B29AD7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabindingSample", "DatabindingSample\DatabindingSample.csproj", "{B1615E11-8EBB-4FA1-8293-592689D4088B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{FCE7A584-4255-4133-BFD1-617080B29AD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FCE7A584-4255-4133-BFD1-617080B29AD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FCE7A584-4255-4133-BFD1-617080B29AD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1615E11-8EBB-4FA1-8293-592689D4088B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1615E11-8EBB-4FA1-8293-592689D4088B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1615E11-8EBB-4FA1-8293-592689D4088B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1615E11-8EBB-4FA1-8293-592689D4088B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
