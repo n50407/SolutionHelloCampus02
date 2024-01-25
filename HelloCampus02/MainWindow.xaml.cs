@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -74,6 +75,27 @@ namespace HelloCampus02
             myBrush = (SolidColorBrush)new BrushConverter().
                 ConvertFrom("#FF0011");
             this.Background = myBrush;
+
+       
+        }
+
+        private void ToggleButton_Click(object sender, RoutedEventArgs e)
+        {// https://github.com/n50407/SolutionHelloCampus02
+            //wenn ToggleButton gedrückt dann soll die Hintergrundfarbe dukelblau sein ansonsten hellblau
+          ToggleButton toggleButton = sender as ToggleButton;
+            if (toggleButton != null)
+            {
+                if (toggleButton.IsChecked == true)
+                {
+                    this.Background = Brushes.DarkBlue;
+                }
+                else
+                {
+                    this.Background = Brushes.LightBlue;
+                }
+            }
+
+
         }
     }
 }

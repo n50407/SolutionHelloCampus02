@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HelloCampus02"
         mc:Ignorable="d"
-        Title="Hello WPF" Height="450" Width="800">
+        Title="Hello WPF" Height="600" Width="800">
     <StackPanel>
         <Button>Hello World</Button>
         <CheckBox>Important</CheckBox>
@@ -59,5 +59,6 @@
             <ComboBoxItem>Green</ComboBoxItem>
             <ComboBoxItem>Blue</ComboBoxItem>
         </ComboBox>
+        <ToggleButton Click="ToggleButton_Click">Hintergrundfarbe</ToggleButton>
     </StackPanel>
 </Window>
