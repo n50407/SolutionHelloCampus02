@@ -1,0 +1,63 @@
+﻿<Window x:Class="HelloCampus02.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HelloCampus02"
+        mc:Ignorable="d"
+        Title="Hello WPF" Height="450" Width="800">
+    <StackPanel>
+        <Button>Hello World</Button>
+        <CheckBox>Important</CheckBox>
+        <Label>das ist eine Beschriftung Neu</Label>
+
+        <Button Background="Gold" FontStyle="Italic" Content="also Servus">            
+        </Button>
+        <Button>
+        </Button>
+        
+        <RadioButton>Bar</RadioButton>
+        <RadioButton>Kreditkarte</RadioButton>
+        <RadioButton>Erlagschein</RadioButton>
+        <RepeatButton ToolTip="bitte Maustaste gedrückt halten" Click="RepeatButton_Click">aktuelle Uhrzeit anzeigen</RepeatButton>
+        <ToggleButton>Geheim</ToggleButton>
+        <Button Content="Variante 1"></Button>
+        <Button>Variante 2</Button>
+        <Button>
+            <Button.Content><!--Property Element Syntax-->
+                <StackPanel>                
+                     <Label>Hello Schmetterling</Label>
+                    <!--Add existing item-->
+                    <Image Height="50" Source="butterfly.jpg"></Image>
+                </StackPanel>
+            </Button.Content>
+        </Button>
+        <Expander Header="Zahlungsinformationen">
+            <Expander.Content>
+                <StackPanel>
+                    <RadioButton>Bar</RadioButton>
+                    <RadioButton>Kredit</RadioButton>
+                    <RadioButton>Erlagschein</RadioButton>
+                </StackPanel>
+            </Expander.Content>
+        </Expander>
+        <GroupBox Header="Wochentage">
+            <StackPanel>
+               <GroupItem>Montag</GroupItem>
+               <GroupItem>Dienstag</GroupItem>
+            </StackPanel>
+        </GroupBox>
+        <ListBox SelectionMode="Single" SelectionChanged="onChange">
+            <ListBox.Items>
+                <ListBoxItem>Burgenland</ListBoxItem>
+                <ListBoxItem>Steiermark</ListBoxItem>
+                <ListBoxItem>Kärnten</ListBoxItem>
+            </ListBox.Items>
+        </ListBox>
+        <ComboBox SelectionChanged="ComboBox_SelectionChanged">
+            <ComboBoxItem>Red</ComboBoxItem>
+            <ComboBoxItem>Green</ComboBoxItem>
+            <ComboBoxItem>Blue</ComboBoxItem>
+        </ComboBox>
+    </StackPanel>
+</Window>
