@@ -6,6 +6,8 @@
         xmlns:local="clr-namespace:AufgabeTicketbestellung"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <StackPanel>
+        <Label>Variante 1</Label>
     <Grid Background="{Binding Farbe}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
@@ -19,9 +21,22 @@
         <Label Grid.Row="0" Grid.Column="0">Preis</Label>
         <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding Price}"></TextBox>
         <Label Grid.Row="1" Grid.Column="0">Anzahl</Label>
-        <Slider Grid.Row="1" Grid.Column="1" Value="{Binding Anzahl}" Minimum="0" Maximum="20" 
+        <Slider Grid.Row="1" Grid.Column="1" Value="{Binding Anzahl}" 
+                Minimum="0" Maximum="20" 
                 TickFrequency="1" IsSnapToTickEnabled="True"></Slider>
         <Label Grid.Row="2" Grid.Column="0">Gesamtpreis</Label>
         <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding Gesamtpreis}"></TextBlock>
     </Grid>
+        <Label>Variant 2</Label>
+        <UniformGrid Rows="3" Columns="2" Background="{Binding Farbe}">         
+            <Label>Preis</Label>
+            <TextBox  Text="{Binding Price}"></TextBox>
+            <Label >Anzahl</Label>
+            <Slider Value="{Binding Anzahl}" 
+             Minimum="0" Maximum="20" 
+             TickFrequency="1" IsSnapToTickEnabled="True"></Slider>
+            <Label >Gesamtpreis</Label>
+            <TextBlock Text="{Binding Gesamtpreis}"></TextBlock>
+        </UniformGrid>
+    </StackPanel>
 </Window>
