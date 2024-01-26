@@ -9,12 +9,45 @@
     <Window.Resources><!--logische Ressourcen-->
         <SolidColorBrush x:Key="myBlueColor" Color="Blue"></SolidColorBrush>
     </Window.Resources>
-    <StackPanel>
+    <StackPanel >
+        <TextBox Text="{Binding EingabeReihe}"/>
+        <Button Click="Button_Click">Ändere Farbe</Button>
+        <Button>Farbe Reihe</Button>
+        <ListBox Background="{Binding Farbe1}" ItemsSource="{Binding Reihe1}"></ListBox>
+        <ComboBox Background="{Binding Farbe2}" ItemsSource="{Binding Reihe2}"/>
+        <ListBox  Background="{Binding Farbe3}" ItemsSource="{Binding Reihe3}"></ListBox>
+            <Button Content="{Binding}"  >
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFAC1818" Offset="0.34"/>
+                    <GradientStop Color="#FF49EC4C" Offset="0.836"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
         <Button Background="{StaticResource myBlueColor}">Hello World</Button>
-        <CheckBox Background="{StaticResource myBlueColor}">Important</CheckBox>
-        <Label>das ist eine Beschriftung Neu</Label>
+        <CheckBox Background="{StaticResource myBlueColor}">
+            <ListBox d:ItemsSource="{d:SampleData ItemCount=5}"/>
+        </CheckBox>
+        <Label Height="445">
+            <TextBlock TextWrapping="Wrap" Text="TextBlock"/>
+        </Label>
 
-        <Button Background="Gold" FontStyle="Italic" Content="also Servus">            
+        <Button>
+            <Button.Content>
+                <StackPanel>
+                      <Label>Hello World</Label>
+                       <Label>ein Test</Label>
+                </StackPanel>
+            </Button.Content>
+        </Button>
+        <ListBox>
+            <ListBoxItem>Sofia</ListBoxItem>
+            <ListBoxItem>Myla</ListBoxItem>
+        </ListBox>
+        <ListBox ItemsSource="{Binding }">
+           
+        </ListBox>
+        <Button Background="Gold" FontStyle="Italic" Content="also Servus" Height="486" Width="173">            
         </Button>
         <Button>
         </Button>

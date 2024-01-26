@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HelloCampus02.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,6 +25,25 @@ namespace HelloCampus02
         public MainWindow()
         {
             InitializeComponent();
+            this.Title = $"Heute ist der {DateTime.Now.ToString()}";
+            this.DataContext = "Hello Freitag";
+
+            this.DataContext=new List<string>() { "Cheda","Victoria"};
+
+            Sitzplan sitzplan = new Sitzplan();
+            sitzplan.Reihe1 = new List<string>() { "Sofia","Myla"};
+            sitzplan.Reihe2 = new List<string>() { "Ksenija", "Nora","Kata" };
+            sitzplan.Reihe3 = new List<string>() { "Jana", "Yasmine" };
+
+            sitzplan.Farbe1 = "Purple";
+            sitzplan.Farbe2 = "Yellow";
+            sitzplan.Farbe3 = "Blue";
+
+            this.DataContext = sitzplan;
+
+
+
+
         }
 
         private void RepeatButton_Click(object sender, RoutedEventArgs e)
@@ -95,6 +115,25 @@ namespace HelloCampus02
                 }
             }
 
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Sitzplan sitzplan=this.DataContext as Sitzplan;
+            var eingegebeneReihe = sitzplan.EingabeReihe;
+            switch(eingegebeneReihe)
+            {
+                case 1:
+                    sitzplan.Farbe1 = "Green";
+                    break;
+                case 2:
+                    sitzplan.Farbe2 = "Green";
+                    break;
+                default:
+                    sitzplan.Farbe3 = "Green";
+                    break;
+            }
 
         }
     }

@@ -24,6 +24,8 @@ namespace DatabindingSample
         public MainWindow()
         {
             InitializeComponent();
+            ProductViewModel viewModel = new ProductViewModel();
+
 
             //Datenkontext auf ein Produkt setzen
             Product myProduct = new Product();
@@ -38,7 +40,9 @@ namespace DatabindingSample
             Color="Yellow",
             Expired=true};
 
-            this.DataContext = myProduct;
+            viewModel.MyProduct = myProduct;
+
+            this.DataContext = viewModel;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

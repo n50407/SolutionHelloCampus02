@@ -8,9 +8,9 @@
         Title="MainWindow" Height="450" Width="800">
     <StackPanel>
         <Label>Price</Label>
-        <TextBlock Text="{Binding Price}"/>
+        <TextBlock Text="{Binding MyProduct.Price}"/>
         <Label>Name</Label>
-        <TextBlock Text="{Binding Productname}"/>
+        <TextBlock Text="{Binding MyProduct.Productname}"/>
         <Button Content="Produktfarbe" Background="{Binding Color}"></Button>
         <CheckBox Content="Ausgelaufen" IsChecked="{Binding Expired}"></CheckBox>
         <Slider Value="{Binding Price}" Minimum="0" Maximum="100"></Slider>
