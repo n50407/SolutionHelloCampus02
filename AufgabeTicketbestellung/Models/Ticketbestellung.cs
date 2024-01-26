@@ -41,7 +41,18 @@ namespace AufgabeTicketbestellung.Models
 
         #endregion
 
+        public Ticketbestellung()
+        {
+            TicketArten = new List<string>()
+            {
+                "Konzert",
+                "Kino",
+                "Museum",
+                "Eishockey"
 
+            };
+
+        }
 
         public event PropertyChangedEventHandler PropertyChanged;
         
@@ -52,7 +63,7 @@ namespace AufgabeTicketbestellung.Models
                 PropertyChanged(this, new PropertyChangedEventArgs(propName));
             }
         }
-
+        public List<string> TicketArten { get; set; }
 
         private double _Price;
 
@@ -119,7 +130,7 @@ namespace AufgabeTicketbestellung.Models
 
         }
 
-
+        
 
 
 

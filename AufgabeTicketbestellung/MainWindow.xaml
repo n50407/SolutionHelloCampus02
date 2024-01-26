@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <StackPanel>
+        <ComboBox ItemsSource="{Binding TicketArten}"/>
         <Label>Variante 1</Label>
     <Grid Background="{Binding Farbe}">
         <Grid.ColumnDefinitions>
