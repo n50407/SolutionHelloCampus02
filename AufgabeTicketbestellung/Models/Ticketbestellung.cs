@@ -76,6 +76,17 @@ namespace AufgabeTicketbestellung.Models
             }
         }
 
+        private string _AusgewaehlteTicketArt;
+
+        public string AusgewaehlteTicketArt
+        {
+            get { return _AusgewaehlteTicketArt; }
+            set {
+                _AusgewaehlteTicketArt = value;
+                ChangeNotification("AusgewaehlteTicketArt");
+            }
+        }
+
         private int _Anzahl;
 
         public int Anzahl

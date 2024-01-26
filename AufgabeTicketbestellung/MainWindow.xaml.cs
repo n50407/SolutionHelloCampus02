@@ -28,8 +28,10 @@ namespace AufgabeTicketbestellung
             Ticketbestellung bestellung = new Ticketbestellung();
             bestellung.setMaxTicketAnzahl(12); //Java Variante
             bestellung.CSharpMaxTicketAnzahlVariante1 = 12; //Prop-C#
+            bestellung.AusgewaehlteTicketArt = "Museum";
 
             this.DataContext = bestellung;
+            this.DataContext = new Ticketbestellung() { AusgewaehlteTicketArt = "Museum" };
 
         }
     }
