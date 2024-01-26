@@ -29,6 +29,8 @@ namespace AufgabeTicketbestellung
             bestellung.setMaxTicketAnzahl(12); //Java Variante
             bestellung.CSharpMaxTicketAnzahlVariante1 = 12; //Prop-C#
 
+            this.DataContext = bestellung;
+
         }
     }
 }
