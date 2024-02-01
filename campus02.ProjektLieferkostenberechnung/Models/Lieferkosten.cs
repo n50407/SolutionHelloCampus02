@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
@@ -22,16 +23,23 @@ namespace campus02.ProjektLieferkostenberechnung.Models
         #endregion
         public Lieferkosten()
         {
-            Laender = new List<string>()
+            Laender = new ObservableCollection<string>()
                 {
                     "AT",
                     "DE",
                     "ES"
                 };
+
+            ObsListeLaender = new ObservableCollection<Land>()
+            {
+                new Land(){Bezeichnung="Austria",Flagge="Austria.png",Kosten=7},
+                new Land(){Bezeichnung="Germany",Flagge="DE.png",Kosten=7},
+
+            };
         }
         #region Properties
 
-        public List<string> Laender { get; set; }
+        public ObservableCollection<string> Laender { get; set; }
 
         private string _AusgewLand;
 
@@ -89,7 +97,7 @@ namespace campus02.ProjektLieferkostenberechnung.Models
             }
         }
 
-
+        public ObservableCollection<Land> ObsListeLaender { get; set; }
 
 
 
@@ -124,6 +132,22 @@ namespace campus02.ProjektLieferkostenberechnung.Models
             NotifyGUI("KostenProKilo");
             NotifyGUI("Flagge");
             NotifyGUI("Ausgabetext");
+        }
+
+        public string AusgabeVariante2 { get; set; }
+
+
+        private Land _AusgewaehltesLandObject;
+
+        public Land AusgewaehltesLandObject
+        {
+            get { return _AusgewaehltesLandObject; }
+            set { 
+                _AusgewaehltesLandObject = value;
+
+                AusgabeVariante2 = $"Sie haben gewählt {AusgewaehltesLandObject.Bezeichnung} Kosten: {AusgewaehltesLandObject.Kosten}";
+                NotifyGUI("AusgabeVariante2");
+            }
         }
 
 

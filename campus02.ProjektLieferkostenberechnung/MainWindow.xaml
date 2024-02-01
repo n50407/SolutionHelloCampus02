@@ -23,5 +23,18 @@
             <RepeatButton Click="RepeatButton_Click">+</RepeatButton>
         </StackPanel>
         <CheckBox IsChecked="{Binding IsExpress}"></CheckBox>
+        <TextBlock Text="{Binding Ausgabetext}"/>
+        <Button Click="Button_Click">Add new Country</Button>
+        <ListBox ItemsSource="{Binding ObsListeLaender}" SelectedItem="{Binding AusgewaehltesLandObject}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Bezeichnung}"></TextBlock>
+                        <Image Source="{Binding Flagge}" Width="50"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <TextBlock Text="{Binding AusgabeVariante2}"></TextBlock>
     </StackPanel>
 </Window>

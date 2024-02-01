@@ -45,5 +45,10 @@ namespace campus02.ProjektLieferkostenberechnung
             }
 
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            lieferkostenDataContext.Laender.Add("IT");
+        }
     }
 }
