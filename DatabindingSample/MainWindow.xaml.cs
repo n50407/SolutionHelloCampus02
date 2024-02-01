@@ -41,6 +41,7 @@ namespace DatabindingSample
             Expired=true};
 
             viewModel.MyProduct = myProduct;
+            viewModel.MyFirstname = "Johann";
 
             this.DataContext = viewModel;
         }
@@ -52,6 +53,30 @@ namespace DatabindingSample
 
             myProduct.Price = currentPrice + 10;
 
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.Title = "";
+        }
+
+        private void Image_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            this.Title = "You clicked the butterfly";
+            e.Handled= true;
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            var myViewModel = this.DataContext as ProductViewModel;
+            myViewModel.MyFirstname = "anonym";
+
+        }
+
+        private void Button_NewWeekday(object sender, RoutedEventArgs e)
+        {
+            var myViewModel = this.DataContext as ProductViewModel;
+            myViewModel.Wochentagen.Add("Samstag");
         }
     }
 }

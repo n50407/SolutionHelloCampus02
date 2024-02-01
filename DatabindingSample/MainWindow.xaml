@@ -5,8 +5,58 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DatabindingSample"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="{Binding CurrentWeekday}" Height="450" Width="800">
     <StackPanel>
+    <Grid>
+            <Button Click="Button_Click_1">
+                <Button.Content>
+                    <StackPanel>
+                    <TextBlock Text="Good Morning :-)"></TextBlock>
+                    <Image   Width="50" Source="/Butterfly.jpg" MouseDown="Image_MouseDown" />
+                    </StackPanel>
+                </Button.Content>
+            </Button>
+            <Button>Hello</Button>
+           
+            <Button Background="Bisque" Content="Hello"></Button>
+            <Button>
+                <Button.Content>
+                    Hallo<!--Property Element Syntax-->
+                </Button.Content>
+                <Button.Background>
+                    <SolidColorBrush Color="Red">                        
+                    </SolidColorBrush>
+                </Button.Background>
+            </Button>
+            <Expander Header="eine Liste">
+                <StackPanel>
+                <ListBox>
+                    <ListBoxItem>Sophia</ListBoxItem>
+                    <ListBoxItem>Mayla</ListBoxItem>
+                </ListBox>
+                    <ComboBox ItemsSource="{Binding Wochentagen}"
+                              SelectedItem="{Binding CurrentWeekday}">
+                    
+                </ComboBox>
+                    <Button Click="Button_NewWeekday">Neuer Wochentag</Button>
+                </StackPanel>
+            </Expander>
+    </Grid>
+    <StackPanel>
+        <!--Simples Databinding
+        PropertyName="Blue" Color="Blue"
+        PropertyName="{Binding MyColor}" 
+        Background="{Binding MyProduct.Color, UpdateSourceTrigger"} abhängig vom DataContext 
+        <TextBlox Text="{Binding MyFirstname"} May
+        
+        
+        -->
+            <TextBox Text="{Binding MyFirstname, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            <Button Click="Button_Click_2">Ändere Name</Button>
+            <TextBlock Text="{Binding MyFirstname}"></TextBlock>
+        
+        
+        
         <Label>Price</Label>
         <TextBlock Text="{Binding MyProduct.Price}"/>
         <TextBox Text="{Binding MyProduct.Price}"/>
@@ -20,5 +70,6 @@
         <TextBox Text="{Binding MyProduct.Ust, UpdateSourceTrigger=PropertyChanged}"/><!--nicht erst beim Lostfocus-->
         <Label>Brutto</Label>
         <TextBlock Text="{Binding MyProduct.Brutto}"/>
+    </StackPanel>
     </StackPanel>
 </Window>
