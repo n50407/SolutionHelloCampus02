@@ -9,15 +9,16 @@
     <StackPanel>
         <Label>Price</Label>
         <TextBlock Text="{Binding MyProduct.Price}"/>
+        <TextBox Text="{Binding MyProduct.Price}"/>
         <Label>Name</Label>
         <TextBlock Text="{Binding MyProduct.Productname}"/>
         <Button Content="Produktfarbe" Background="{Binding Color}"></Button>
         <CheckBox Content="Ausgelaufen" IsChecked="{Binding Expired}"></CheckBox>
-        <Slider Value="{Binding Price}" Minimum="0" Maximum="100"></Slider>
+        <Slider Value="{Binding MyProduct.Price}" Minimum="0" Maximum="100"></Slider>
         <Button Click="Button_Click">für Debug</Button>
         <Label>Ust</Label>
-        <TextBox Text="{Binding Ust, UpdateSourceTrigger=PropertyChanged}"/><!--nicht erst beim Lostfocus-->
+        <TextBox Text="{Binding MyProduct.Ust, UpdateSourceTrigger=PropertyChanged}"/><!--nicht erst beim Lostfocus-->
         <Label>Brutto</Label>
-        <TextBlock Text="{Binding Brutto}"/>
+        <TextBlock Text="{Binding MyProduct.Brutto}"/>
     </StackPanel>
 </Window>
