@@ -65,6 +65,31 @@ namespace campus02.ProjektLieferkostenberechnung.Models
             get { return _Ausgabetext; }
             set { _Ausgabetext = value; }
         }
+        private int _Gesamtgewicht;
+
+        public int Gesamtgewicht
+        {
+            get { return _Gesamtgewicht; }
+            set { 
+                _Gesamtgewicht = value;
+                OnLandChange();
+                NotifyGUI("Gesamtgewicht");
+            }
+        }
+
+        private bool _IsExpress;
+
+        public bool IsExpress
+        {
+            get { return _IsExpress; }
+            set { 
+                _IsExpress = value;
+                OnLandChange();
+                NotifyGUI("IsExpress");
+            }
+        }
+
+
 
 
 
@@ -89,7 +114,13 @@ namespace campus02.ProjektLieferkostenberechnung.Models
                 default:
                     break;
             }
-            Ausgabetext = $"Sie haben {AusgewLand} ausgewählt. Hier kostet ein Kilo {KostenProKilo}";
+            var gesamtpreis = Gesamtgewicht * KostenProKilo;
+            if (IsExpress)
+            {
+                gesamtpreis *= 1.1;
+            }
+
+            Ausgabetext = $"Sie haben {AusgewLand} ausgewählt. Hier kostet ein Kilo {KostenProKilo} Gesamtgewicht {Gesamtgewicht} Express ist {IsExpress} Gesamtpreis {gesamtpreis}";
             NotifyGUI("KostenProKilo");
             NotifyGUI("Flagge");
             NotifyGUI("Ausgabetext");

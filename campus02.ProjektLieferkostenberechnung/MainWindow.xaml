@@ -15,5 +15,13 @@
             <TextBlock>Kosten</TextBlock>
             <TextBox Text="{Binding KostenProKilo}"></TextBox>
         </StackPanel>
+        <StackPanel>
+            <Label>Gesamtgewicht</Label>
+            <TextBox Text="{Binding Gesamtgewicht}"></TextBox>
+            <Slider Value="{Binding Gesamtgewicht}" Minimum="0" Maximum="100" IsSnapToTickEnabled="True" TickFrequency="1" AutoToolTipPlacement="TopLeft" ></Slider>
+            <RepeatButton Click="RepeatButton_Click">-</RepeatButton>
+            <RepeatButton Click="RepeatButton_Click">+</RepeatButton>
+        </StackPanel>
+        <CheckBox IsChecked="{Binding IsExpress}"></CheckBox>
     </StackPanel>
 </Window>
