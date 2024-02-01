@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:campus02.ProjektLieferkostenberechnung"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="{Binding Ausgabetext}" Height="450" Width="800">
     <StackPanel>
         <StackPanel Orientation="Horizontal">
             <Label>Laender</Label>
             <ComboBox ItemsSource="{Binding Laender}" SelectedItem="{Binding AusgewLand}">
             </ComboBox>
-            <Image Source="{Binding Flagge}"></Image>
+            <Image Height="50" Source="{Binding Flagge}"></Image>
             <TextBlock>Kosten</TextBlock>
             <TextBox Text="{Binding KostenProKilo}"></TextBox>
         </StackPanel>

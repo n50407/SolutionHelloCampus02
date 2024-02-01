@@ -44,12 +44,12 @@ namespace campus02.ProjektLieferkostenberechnung.Models
             
             }
         }
-        private double _PreisProKilo;
+        private double _KostenProKilo;
 
-        public double PreisProKilo
+        public double KostenProKilo
         {
-            get { return _PreisProKilo; }
-            set { _PreisProKilo = value; }
+            get { return _KostenProKilo; }
+            set { _KostenProKilo = value; }
         }
         private string _Flagge;
 
@@ -72,7 +72,27 @@ namespace campus02.ProjektLieferkostenberechnung.Models
 
         private void OnLandChange()
         {
-            throw new NotImplementedException();
+            switch (AusgewLand)
+            {
+                case "AT":
+                    KostenProKilo = 12;
+                    Flagge = "Austria.png";
+                    break;
+                case "DE":
+                    KostenProKilo = 20;
+                    Flagge = "DE.png";
+                    break;
+                case "ES":
+                    KostenProKilo = 25;
+                    Flagge = "Spain.png";
+                    break;
+                default:
+                    break;
+            }
+            Ausgabetext = $"Sie haben {AusgewLand} ausgewählt. Hier kostet ein Kilo {KostenProKilo}";
+            NotifyGUI("KostenProKilo");
+            NotifyGUI("Flagge");
+            NotifyGUI("Ausgabetext");
         }
 
 
