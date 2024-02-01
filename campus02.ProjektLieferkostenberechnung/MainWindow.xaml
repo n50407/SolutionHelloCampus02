@@ -8,8 +8,8 @@
         Title="MainWindow" Height="450" Width="800">
     <StackPanel>
         <StackPanel Orientation="Horizontal">
-        <Label>Laender</Label>
-            <ComboBox ItemsSource="{Binding Laender}">                
+            <Label>Laender</Label>
+            <ComboBox ItemsSource="{Binding Laender}" SelectedItem="{Binding AusgewLand}">
             </ComboBox>
             <Image Source="{Binding Flagge}"></Image>
             <TextBlock>Kosten</TextBlock>
