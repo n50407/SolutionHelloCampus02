@@ -20,5 +20,16 @@
         </ComboBox>
         <TextBlock Text="{Binding SelectedKinofilm.Titel}"/>
 
+        <Expander Header="Neuer Kinofil">
+            <StackPanel>
+                <TextBlock>Titel</TextBlock>
+                <TextBox Text="{Binding NeuerFilm.Titel}"></TextBox>
+                <TextBlock>Genre</TextBlock>
+                <TextBox Text="{Binding NeuerFilm.Genre}"></TextBox>
+                <Button Click="AddNewFilm">Film hinzufügen</Button>
+            </StackPanel>
+            
+        </Expander>
+
     </StackPanel>
 </Window>

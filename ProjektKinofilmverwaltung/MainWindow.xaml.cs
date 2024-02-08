@@ -26,6 +26,7 @@ namespace ProjektKinofilmverwaltung
             InitializeComponent();
 
             KinofilmViewModel kinofilmViewModel = new KinofilmViewModel();
+            
 
             kinofilmViewModel.Kinofilme = new System.Collections.ObjectModel.ObservableCollection<Kinofilm>()
             {
@@ -33,8 +34,27 @@ namespace ProjektKinofilmverwaltung
                 new Kinofilm() { FilmId = 2, Titel = "Indiana Jones", Genre = "Abenteuer", Bild = "indianajones.jpg" },
                 new Kinofilm() { FilmId = 3, Titel = "James Bond", Genre = "Action", Bild = "jamesbond.jpg" }
             };
+            kinofilmViewModel.NeuerFilm = new Kinofilm();
+
+            kinofilmViewModel.Titel = "Es sind 3 Filme in der Liste";
 
             this.DataContext = kinofilmViewModel;
+        }
+
+
+        private void AddNewFilm(object sender, RoutedEventArgs e)
+        {
+            KinofilmViewModel kinofilmViewModel = (KinofilmViewModel)this.DataContext;
+
+
+            Kinofilm neuerFilm = new Kinofilm();
+
+            neuerFilm.Titel = kinofilmViewModel.NeuerFilm.Titel;
+            neuerFilm.Genre = kinofilmViewModel.NeuerFilm.Genre;
+
+            
+            kinofilmViewModel.AddKinofilm(neuerFilm);
+
         }
     }
 }

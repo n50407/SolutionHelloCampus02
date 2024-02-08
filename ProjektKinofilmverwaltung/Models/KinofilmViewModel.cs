@@ -45,6 +45,8 @@ namespace ProjektKinofilmverwaltung.Models
             set { _Titel = value; }
         }
 
+        public Kinofilm NeuerFilm { get; set; }
+
     }
     
     
