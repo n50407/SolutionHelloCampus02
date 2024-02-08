@@ -56,5 +56,15 @@ namespace ProjektKinofilmverwaltung
             kinofilmViewModel.AddKinofilm(neuerFilm);
 
         }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Bitte geben Sie einen neuen Kinofilm ein");
+        }
     }
 }

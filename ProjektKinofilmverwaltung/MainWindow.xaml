@@ -6,30 +6,53 @@
         xmlns:local="clr-namespace:ProjektKinofilmverwaltung"
         mc:Ignorable="d"
         Title="{Binding Titel}" Height="450" Width="800">
-    <StackPanel>
-        <ComboBox ItemsSource="{Binding Kinofilme}" SelectedItem="{Binding SelectedKinofilm}">
-            <ComboBox.ItemTemplate>
+    <DockPanel x:Name="dockPanel1">
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_File">
+                <MenuItem Header="New" Click="MenuItem_Click_1"></MenuItem>
+                <MenuItem Header="Exit" Click="MenuItem_Click"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="_Edit"/>
+            <MenuItem Header="_Help"/>
+        </Menu>
+        <ToolBarTray Background="White" DockPanel.Dock="Top">
+            <ToolBar Band="1" BandIndex="1">
+                <Button>A</Button>
+                <Button>B</Button>
+                <Separator/>
+                <Button>C</Button>
+            </ToolBar>
+        </ToolBarTray>
+        <StatusBar DockPanel.Dock="Bottom">
+            <StatusBarItem>
+                <TextBlock>Ready</TextBlock>
+            </StatusBarItem>
+        </StatusBar>
+        <ListBox DockPanel.Dock="Left" ItemsSource="{Binding Kinofilme}" SelectedItem="{Binding SelectedKinofilm}">
+            <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="{Binding Titel}"/>
                         <TextBlock Text="{Binding Genre}"/>
                     </StackPanel>
                 </DataTemplate>
-            </ComboBox.ItemTemplate>
+            </ListBox.ItemTemplate>
 
-        </ComboBox>
-        <TextBlock Text="{Binding SelectedKinofilm.Titel}"/>
+        </ListBox>
+        <StackPanel>
+            <TextBlock Text="{Binding SelectedKinofilm.Titel}"/>
 
-        <Expander Header="Neuer Kinofil">
-            <StackPanel>
-                <TextBlock>Titel</TextBlock>
-                <TextBox Text="{Binding NeuerFilm.Titel}"></TextBox>
-                <TextBlock>Genre</TextBlock>
-                <TextBox Text="{Binding NeuerFilm.Genre}"></TextBox>
-                <Button Click="AddNewFilm">Film hinzufügen</Button>
-            </StackPanel>
-            
-        </Expander>
+            <Expander Header="Neuer Kinofil">
+                <StackPanel>
+                    <TextBlock>Titel</TextBlock>
+                    <TextBox Text="{Binding NeuerFilm.Titel}"></TextBox>
+                    <TextBlock>Genre</TextBlock>
+                    <ComboBox ItemsSource="{Binding Genres}" SelectedItem="{Binding NeuerFilm.Genre}"></ComboBox>
+                    <Button Click="AddNewFilm">Film hinzufügen</Button>
+                </StackPanel>
 
-    </StackPanel>
+            </Expander>
+
+        </StackPanel>
+    </DockPanel>
 </Window>

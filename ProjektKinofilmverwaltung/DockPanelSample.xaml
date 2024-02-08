@@ -1,0 +1,36 @@
+﻿<Window x:Class="ProjektKinofilmverwaltung.DockPanelSample"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjektKinofilmverwaltung"
+        mc:Ignorable="d"
+        Title="DockPanelSample" Height="450" Width="800">
+    <DockPanel x:Name="dockPanel1">
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_File"/>
+            <MenuItem Header="_Edit"/>
+            <MenuItem Header="_Help"/>
+        </Menu>
+        <ToolBarTray Background="White" DockPanel.Dock="Top">
+            <ToolBar Band="1" BandIndex="1">
+                <Button>A</Button>
+                <Button>B</Button>
+                <Separator/>
+                <Button>C</Button>
+            </ToolBar>
+        </ToolBarTray>
+        <StatusBar DockPanel.Dock="Bottom">
+            <StatusBarItem>
+                <TextBlock>Ready</TextBlock>
+            </StatusBarItem>
+        </StatusBar>
+        <ListBox DockPanel.Dock="Left">
+            <ListBoxItem>A</ListBoxItem>
+            <ListBoxItem>C</ListBoxItem>
+        </ListBox>
+        <GroupBox Header="Meine Details">
+            
+        </GroupBox>
+    </DockPanel>
+</Window>

@@ -47,6 +47,12 @@ namespace ProjektKinofilmverwaltung.Models
 
         public Kinofilm NeuerFilm { get; set; }
 
+        public List<string> Genres { get; set; }
+        public KinofilmViewModel()
+        {
+                Genres = new List<string>() { "Science Fiction", "Abenteuer", "Action","Comedy" };
+        }
+
     }
     
     
