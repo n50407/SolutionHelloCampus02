@@ -47,10 +47,20 @@ namespace ProjektKinofilmverwaltung.Models
 
         public Kinofilm NeuerFilm { get; set; }
 
-        public List<string> Genres { get; set; }
+
+        //Aufgabe - neue Genres über eigenes Fenster hinzufügen
+        public ObservableCollection<string> Genres { get; set; }
+        public string NeuesGenre { get; set; }
+
+        public void AddNewGenre(string genre)
+        {
+            Genres.Add(genre);
+          
+        }
+
         public KinofilmViewModel()
         {
-                Genres = new List<string>() { "Science Fiction", "Abenteuer", "Action","Comedy" };
+                Genres = new ObservableCollection<string>() { "Science Fiction", "Abenteuer", "Action","Comedy" };
         }
 
     }

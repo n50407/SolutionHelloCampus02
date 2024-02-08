@@ -56,5 +56,12 @@ namespace ProjektKinofilmverwaltung
             neuerKinofilm.DataContext = this.DataContext;
             neuerKinofilm.ShowDialog();
         }
+
+        private void NeuesGenre_Click(object sender, RoutedEventArgs e)
+        {   
+            WindowNewGenre windowNewGenre = new WindowNewGenre();
+            windowNewGenre.DataContext = this.DataContext;
+            windowNewGenre.ShowDialog();
+        }
     }
 }
