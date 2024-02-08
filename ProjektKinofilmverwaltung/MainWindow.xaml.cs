@@ -42,20 +42,7 @@ namespace ProjektKinofilmverwaltung
         }
 
 
-        private void AddNewFilm(object sender, RoutedEventArgs e)
-        {
-            KinofilmViewModel kinofilmViewModel = (KinofilmViewModel)this.DataContext;
-
-
-            Kinofilm neuerFilm = new Kinofilm();
-
-            neuerFilm.Titel = kinofilmViewModel.NeuerFilm.Titel;
-            neuerFilm.Genre = kinofilmViewModel.NeuerFilm.Genre;
-
-            
-            kinofilmViewModel.AddKinofilm(neuerFilm);
-
-        }
+      
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
@@ -64,7 +51,10 @@ namespace ProjektKinofilmverwaltung
 
         private void MenuItem_Click_1(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Bitte geben Sie einen neuen Kinofilm ein");
+            //MessageBox.Show("Bitte geben Sie einen neuen Kinofilm ein");
+            NeuerKinofilm neuerKinofilm = new NeuerKinofilm();
+            neuerKinofilm.DataContext = this.DataContext;
+            neuerKinofilm.ShowDialog();
         }
     }
 }
