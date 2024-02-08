@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AufgabeTicketbestellung", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "campus02.ProjektLieferkostenberechnung", "campus02.ProjektLieferkostenberechnung\campus02.ProjektLieferkostenberechnung.csproj", "{B259A045-B501-4B9D-8A27-BECEFB137BC4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjektKinofilmverwaltung", "ProjektKinofilmverwaltung\ProjektKinofilmverwaltung.csproj", "{FCFA7F2F-0D9A-418A-B891-EA8ED4956203}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{B259A045-B501-4B9D-8A27-BECEFB137BC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B259A045-B501-4B9D-8A27-BECEFB137BC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B259A045-B501-4B9D-8A27-BECEFB137BC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCFA7F2F-0D9A-418A-B891-EA8ED4956203}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCFA7F2F-0D9A-418A-B891-EA8ED4956203}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCFA7F2F-0D9A-418A-B891-EA8ED4956203}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCFA7F2F-0D9A-418A-B891-EA8ED4956203}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
