@@ -48,5 +48,30 @@ namespace SampleWPFmitEF.Models
             OnPropertyChanged("StatusAnzeige");
 
         }
+
+        public ObservableCollection<Student> SearchResult { get; set; }
+
+        private string _Suchbegriff;
+
+        public string Suchbegriff
+        {
+            get { return _Suchbegriff; }
+            set { 
+                _Suchbegriff = value; 
+                SearchStudent(_Suchbegriff);
+            }
+        }
+
+        public void SearchStudent(string searchName)
+        {
+            SearchResult = new ObservableCollection<Student>();
+            foreach (var student in MyStudents)
+            {
+                if (student.Name.Contains(searchName))
+                {
+                    SearchResult.Add(student);
+                }
+            }
+        }
     }
 }

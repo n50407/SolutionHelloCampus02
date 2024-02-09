@@ -6,6 +6,13 @@
         xmlns:local="clr-namespace:SampleWPFmitEF"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Date">
+                <MenuItem Header="Suche nach Namen"></MenuItem>
+            </MenuItem>
+        </Menu>
     <StackPanel>
         <ListBox ItemsSource="{Binding MyStudents}">
             <ListBox.ItemTemplate>
@@ -22,4 +29,5 @@
         </GroupBox>
         <Button Click="Button_Click_NewStudent">new Student</Button>
     </StackPanel>
+    </DockPanel>
 </Window>
