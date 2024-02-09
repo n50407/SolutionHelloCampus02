@@ -52,5 +52,11 @@ namespace SampleWPFmitEF
 
 
         }
+
+        private void MenuItem_Click_SearchWindow(object sender, RoutedEventArgs e)
+        {
+
+
+        }
     }
 }

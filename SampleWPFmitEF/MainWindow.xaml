@@ -10,7 +10,7 @@
     <DockPanel>
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="Date">
-                <MenuItem Header="Suche nach Namen"></MenuItem>
+                <MenuItem Header="Suche nach Namen" Click="MenuItem_Click_SearchWindow"></MenuItem>
             </MenuItem>
         </Menu>
     <StackPanel>
