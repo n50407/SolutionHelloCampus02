@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "campus02.ProjektLieferkoste
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjektKinofilmverwaltung", "ProjektKinofilmverwaltung\ProjektKinofilmverwaltung.csproj", "{FCFA7F2F-0D9A-418A-B891-EA8ED4956203}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleWPFmitEF", "SampleWPFmitEF\SampleWPFmitEF.csproj", "{B5E3C4DB-082C-40A2-B185-8EF973C0007A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{FCFA7F2F-0D9A-418A-B891-EA8ED4956203}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FCFA7F2F-0D9A-418A-B891-EA8ED4956203}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FCFA7F2F-0D9A-418A-B891-EA8ED4956203}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5E3C4DB-082C-40A2-B185-8EF973C0007A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5E3C4DB-082C-40A2-B185-8EF973C0007A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5E3C4DB-082C-40A2-B185-8EF973C0007A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5E3C4DB-082C-40A2-B185-8EF973C0007A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
