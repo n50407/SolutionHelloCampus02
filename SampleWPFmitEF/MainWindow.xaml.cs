@@ -39,6 +39,12 @@ namespace SampleWPFmitEF
             db.Students.Add(std1);
             db.SaveChanges(); //Daten in die DB schreiben, Insert wird automatisch generiert
 
+            //db.Students.ToList();
+            //db.Students.Where(s => s.Name == "Mayla").ToList();
+            //db.Students.Remove(std1);
+            //db.Students.Find(1);
+
+
         }
     }
 }
