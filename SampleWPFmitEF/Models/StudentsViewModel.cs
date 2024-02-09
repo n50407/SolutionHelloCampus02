@@ -16,10 +16,12 @@ namespace SampleWPFmitEF.Models
         {
             NewStudent = new Student();
             MyStudents = new ObservableCollection<Student>();
+            SearchResult = new ObservableCollection<Student>();
             var myStudentsLocalFromDB = db.Students.ToList();
             foreach (var student in myStudentsLocalFromDB)
             {
                 MyStudents.Add(student);
+                SearchResult.Add(student);
             }
             StatusAnzeige = "Momentan sind " + db.Students.ToList().Count + " Studierende in der DB";
             OnPropertyChanged("StatusAnzeige");
@@ -64,7 +66,7 @@ namespace SampleWPFmitEF.Models
 
         public void SearchStudent(string searchName)
         {
-            SearchResult = new ObservableCollection<Student>();
+            SearchResult.Clear();
             foreach (var student in MyStudents)
             {
                 if (student.Name.Contains(searchName))

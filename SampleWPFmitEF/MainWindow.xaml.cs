@@ -55,7 +55,10 @@ namespace SampleWPFmitEF
 
         private void MenuItem_Click_SearchWindow(object sender, RoutedEventArgs e)
         {
+            SearchWindow searchWindow = new SearchWindow();
+            searchWindow.DataContext = this.DataContext;
 
+            searchWindow.ShowDialog();  
 
         }
     }
