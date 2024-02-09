@@ -81,6 +81,7 @@
   <ItemGroup>
     <Compile Include="Models\Campus02DBContext.cs" />
     <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\StudentsViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
