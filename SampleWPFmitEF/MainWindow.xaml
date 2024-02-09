@@ -7,6 +7,19 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <StackPanel>
+        <ListBox ItemsSource="{Binding MyStudents}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Name}"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <GroupBox Header="New Student">
+            <StackPanel>
+                <TextBlock>Name</TextBlock>
+                <TextBox Text="{Binding NewStudent.Name}"/>
+            </StackPanel>
+        </GroupBox>
         <Button Click="Button_Click_NewStudent">new Student</Button>
     </StackPanel>
 </Window>

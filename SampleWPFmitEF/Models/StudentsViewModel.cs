@@ -14,6 +14,7 @@ namespace SampleWPFmitEF.Models
 
         public StudentsViewModel()
         {
+            NewStudent = new Student();
             MyStudents = new ObservableCollection<Student>();
             var myStudentsLocalFromDB = db.Students.ToList();
             foreach (var student in myStudentsLocalFromDB)
@@ -24,7 +25,6 @@ namespace SampleWPFmitEF.Models
             OnPropertyChanged("StatusAnzeige");
         }
 
-
         private void OnPropertyChanged(string propertyName)
         {
             if (PropertyChanged != null)
@@ -32,9 +32,7 @@ namespace SampleWPFmitEF.Models
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }
         }
-
         public Student NewStudent { get; set; }
-
         public ObservableCollection<Student>  MyStudents { get; set; }
 
         public string StatusAnzeige { get; set; }

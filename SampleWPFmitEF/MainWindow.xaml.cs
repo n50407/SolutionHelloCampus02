@@ -28,16 +28,22 @@ namespace SampleWPFmitEF
             //Install-Package EntityFramework
             //2. Model erstellen - class Sutdent { int Id {get;set;} string Name {get;set;} }
             //3. DBContext erstellen
+            StudentsViewModel studentsViewModel = new StudentsViewModel();  
+            this.DataContext = studentsViewModel;
         }
 
         private void Button_Click_NewStudent(object sender, RoutedEventArgs e)
         {
-            Student std1 = new Student();
-            std1.Name = "Mayla";
+            
+          
 
-            Campus02DBContext db = new Campus02DBContext();
-            db.Students.Add(std1);
-            db.SaveChanges(); //Daten in die DB schreiben, Insert wird automatisch generiert
+            //Campus02DBContext db = new Campus02DBContext();
+            //db.Students.Add(std1);
+            var vm= (StudentsViewModel)this.DataContext;
+            Student std1 = new Student();
+            std1.Name = vm.NewStudent.Name;
+            vm.AddStudent(std1);
+            //db.SaveChanges(); //Daten in die DB schreiben, Insert wird automatisch generiert
 
             //db.Students.ToList();
             //db.Students.Where(s => s.Name == "Mayla").ToList();
